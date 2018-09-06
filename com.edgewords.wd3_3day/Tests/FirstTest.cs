@@ -66,10 +66,9 @@ namespace com.edgewords.wd3_3day.Tests
 
             Console.WriteLine("Cap added to basket");
 
-            test.Log(Status., "Here is a user info line!");
+            test.Log(Status.Info, "Here is a user info line!");
 
-            ((ITakesScreenshot)driver).GetScreenshot()
-                .SaveAsFile(dir + "screenshot." + System.Drawing.Imaging.ImageFormat.Png);
+            ((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(dir + "screenshot." + System.Drawing.Imaging.ImageFormat.Png);
 
             test.AddScreenCaptureFromPath("screenshot.png");
 
