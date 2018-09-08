@@ -7,19 +7,16 @@ using System.Threading;
 
 namespace com.edgewords.wd3_3day.PageObjects
 {
-    class SearchPage
+    public class SearchPage
     {
-        private IWebDriver driver;
+        private IWebDriver _driver;
 
         //Constructor to set driver object
-        public SearchPage(IWebDriver driver)
-        {
-            this.driver = driver;
-        }
+        public SearchPage(IWebDriver driver) => _driver = driver;
 
         // Set our Locators for the elements on the Web Page
-        public IWebElement SearchField => driver.FindElement(By.Id("woocommerce-product-search-field-0"));
-        public IWebElement ShopLink => driver.FindElement(By.LinkText("Shop"));
+        public IWebElement SearchField => _driver.FindElement(By.Id("woocommerce-product-search-field-0"));
+        public IWebElement ShopLink => _driver.FindElement(By.LinkText("Shop"));
 
 
         // Helper Methods
